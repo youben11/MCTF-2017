@@ -20,8 +20,7 @@ this time i used [jadx](https://github.com/skylot/jadx) to reverse the [apk](htt
 <img src="https://github.com/youben11/MCTF-2017/blob/master/code_onClick.png"/>
 
 we know now that the format of the flag is :
-
-"th3jackers{" +
++ "th3jackers{" +
 + String.valueOf(this.edittext.getText()).substring(0, 6) +
 + String.valueOf(new Random().nextInt(10)) +
 + cksum() +
@@ -29,9 +28,9 @@ we know now that the format of the flag is :
 
 at this moment we don't know 3 things :
 
-1.String.valueOf(this.edittext.getText()).substring(0, 6) + String.valuesOf(new Random().nextInt())
-2.cksum()
-3.timestamp to use (String.valueOf(TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis())))
+1. String.valueOf(this.edittext.getText()).substring(0, 6) + String.valuesOf(new Random().nextInt())
+2. cksum()
+3. timestamp to use (String.valueOf(TimeUnit.MILLISECONDS.toSeconds(System.currentTimeMillis())))
 
 we will discuss each of this point :
 
@@ -41,17 +40,17 @@ we will discuss each of this point :
    
    so all we have to do is brute force 7 decimal digit that gives 10000000 try which is possible to do in few minutes
    
-2.cksum() return the CRC of the entry("classes.dex") in the zipfile of com.th3jackers.th3jand-1.apk
+2. cksum() return the CRC of the entry("classes.dex") in the zipfile of com.th3jackers.th3jand-1.apk
   we can get it with some code:
   
   <img src="https://github.com/youben11/MCTF-2017/blob/master/code_crc.png"/>
   
   <img src="https://github.com/youben11/MCTF-2017/blob/master/terminal_crc.png"/>
   
-3.we can get the timestamp by getting the timestamp of the userdata-qemu/data/com.th3jackers.th3jand-1.apk/files/enc_flag
-  <img src="https://github.com/youben11/MCTF-2017/blob/master/terminal_timestamp.png"/>
+3. we can get the timestamp by getting the timestamp of the userdata-qemu/data/com.th3jackers.th3jand-1.apk/files/enc_flag 
+<img src="https://github.com/youben11/MCTF-2017/blob/master/terminal_timestamp.png"/>
   
-  We can now run a brute-force to get the flag
+We can now run a brute-force to get the flag
   
   <img src="https://github.com/youben11/MCTF-2017/blob/master/code_bf.png"/>
   
