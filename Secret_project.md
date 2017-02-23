@@ -51,6 +51,7 @@ we will discuss each of this point :
 <img src="https://github.com/youben11/MCTF-2017/blob/master/terminal_timestamp.png"/>
   
 We can now run a brute-force to get the flag
+We get the md5(flag) from "enc_flag" file
   
   <img src="https://github.com/youben11/MCTF-2017/blob/master/code_bf.png"/>
   
