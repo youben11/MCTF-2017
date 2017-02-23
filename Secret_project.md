@@ -1,21 +1,19 @@
-  #Sudo_root
-  #youben
+#Sudo_root
+#youben
 
-Secret project 300pts|
-----------------------
-Yesterday Bill was murdered , we know from his friend that he|
-	was working on a secret project but nobody knows what is it (thats why its secret xD )|
-	the police did some forensics and found this interesting file , but they couldn't go deeper.|
-	Can you ?|
-------------------------------------------------------------------------------------------------
+Secret project 300pts :
 
+Yesterday Bill was murdered , we know from his friend that he
+was working on a secret project but nobody knows what is it (thats why its secret xD )
+the police did some forensics and found this interesting file , but they couldn't go deeper.
+Can you ?|
 
 We have a big directory which i can't upload so i will focus more on the reversing part.
 
 After doing some forensic and extract the content of userdata-qemu.img, we can find com.th3jackers.th3jand-1.apk
 it seems to be the application intended to be reversed
 
-[terminal_ls]: https://github.com/youben11/MCTF-2017/blob/master/terminal_ls.png
+[terminal_ls]: https://github.com/youben11/MCTF-2017/blob/master/terminal_ls.png "logo"
 
 this time i used [jadx](https://github.com/skylot/jadx) to reverse the [apk](https://github.com/youben11/MCTF-2017/blob/master/com.th3jackers.th3jand-1.apk)
 
